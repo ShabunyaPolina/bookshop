@@ -1,51 +1,36 @@
 <%@ tag trimDirectiveWhitespaces="true" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<%--<%@ attribute name="book" required="true" type="com.es.bookshop.book.Book"%>--%>
+<%@ attribute name="book" required="true" type="com.es.bookshop.product.book.Book"%>
 
 <tr>
     <td>
-        <img src="<c:url value='/images/AnnaKareninaBook.jpg'/>">
+        <img src="<c:url value='${book.imageUrl}'/>">
     </td>
     <td class="description-td">
         <table>
             <tr>
-                <td>
-                    Author:
-                </td>
-                <td>
-                    Lev Tolstoy
-                </td>
+                <td> Name: </td>
+                <td> ${book.name} </td>
             </tr>
             <tr>
-                <td>
-                    Language:
-                </td>
-                <td>
-                   Russian
-                </td>
+                <td> Author: </td>
+                <td> ${book.author} </td>
             </tr>
             <tr>
-                <td>
-                    Publishing house:
-                </td>
-                <td>
-                    "Azbuka"
-                </td>
+                <td> Language: </td>
+                <td> ${book.language} </td>
             </tr>
             <tr>
-                <td>
-                    Number of pages:
-                </td>
-                <td>
-                    832
-                </td>
+                <td> Publishing house: </td>
+                <td> "${book.publishingHouse}" </td>
+            </tr>
+            <tr>
+                <td> Number of pages: </td>
+                <td> ${book.numberOfPages} </td>
             </tr>
         </table>
-        <p>Anna Karenina is the best novel about a woman written in the 19th century.
-            This is a novel about the tragic love of a married lady Anna Karenina and
-            a brilliant officer Alexei Vronsky against the backdrop of a happy family
-            life of the nobles Konstantin Levin and Kitty Shcherbatskaya.</p>
+        <p> ${book.description} </p>
     </td>
-    <td>13 $</td>
+    <td> ${book.price.value} <span> </span> ${book.price.currency} </td>
 </tr>

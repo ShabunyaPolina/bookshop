@@ -1,25 +1,25 @@
-package com.es.bookshop.book;
+package com.es.bookshop.product.book;
 
-public class Book {
+import com.es.bookshop.product.Price;
+import com.es.bookshop.product.Product;
+
+public class Book extends Product {
     private String name;
     private String author;
+    private String language;
     private String publishingHouse;
     private String description;
-    private String imageUrl;
-    private String language;
     private int numberOfPages;
-    private int price;
 
-    public Book(String name, String author, String publishingHouse, String description,
-                String imageUrl, String language, int numberOfPages, int price) {
+    public Book(String code, Price price, String name, String author, String language,
+                String publishingHouse, int numberOfPages, String description, String imageUrl) {
+        super(code, price, imageUrl);
         this.name = name;
         this.author = author;
-        this.publishingHouse = publishingHouse;
-        this.description = description;
-        this.imageUrl = imageUrl;
         this.language = language;
+        this.publishingHouse = publishingHouse;
         this.numberOfPages = numberOfPages;
-        this.price = price;
+        this.description = description;
     }
 
     public String getName() {
@@ -54,14 +54,6 @@ public class Book {
         this.description = description;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
-    }
-
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
-    }
-
     public String getLanguage() {
         return language;
     }
@@ -76,13 +68,5 @@ public class Book {
 
     public void setNumberOfPages(int numberOfPages) {
         this.numberOfPages = numberOfPages;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
     }
 }

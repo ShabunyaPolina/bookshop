@@ -4,6 +4,8 @@
 
 <link href="<c:url value='/styles/main.css'/>" rel="stylesheet" type="text/css">
 
+<jsp:useBean id="products" type="java.util.List" scope="request"/>
+
 <h1>BOOKSHOP</h1>
 <p>Hello! :)</p>
 
@@ -14,6 +16,8 @@
     <th>Price</th>
     </thead>
     <tbody>
-    <tags:bookTableRow/>
+    <c:forEach var="product" items="${products}">
+        <tags:bookTableRow book="${product}"/>
+    </c:forEach>
     </tbody>
 </table>
