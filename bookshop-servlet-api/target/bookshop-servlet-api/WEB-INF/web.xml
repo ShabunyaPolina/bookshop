@@ -5,16 +5,5 @@
                         https://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          id="WebApp_ID"
          version="4.0">
-
-    <servlet>
-        <servlet-name>mainPage</servlet-name>
-        <servlet-class>com.es.bookshop.web.servlet.MainPageServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>mainPage</servlet-name>
-        <url-pattern/>
-    </servlet-mapping>
-
 </web-app>
 

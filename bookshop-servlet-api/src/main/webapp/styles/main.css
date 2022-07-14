@@ -1,0 +1,23 @@
+table {
+  border-collapse: collapse;
+  border : 1px solid gray;
+}
+
+th {
+  padding: 10px;
+  border : 1px solid gray;
+}
+
+td {
+  padding: 10px;
+  border : 1px solid gray;
+}
+
+img {
+  height: 300px;
+  width: 200px;
+}
+
+.description-td {
+  width: 300px;
+}
