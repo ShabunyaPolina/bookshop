@@ -8,16 +8,17 @@ import com.es.bookshop.exception.ProductNotFoundException;
 import com.es.bookshop.product.Product;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 import java.util.stream.Collectors;
 
 public class ProductStorageDAO implements ProductDAO {
-    private final ProductStorage storageItems;
+    private final ProductStorage storageProducts;
     private final ReadWriteLock locker;
 
     private ProductStorageDAO() {
-        storageItems = new ProductStorage();
+        storageProducts = new ProductStorage();
         this.locker = new ReentrantReadWriteLock();
     }
 
@@ -33,12 +34,10 @@ public class ProductStorageDAO implements ProductDAO {
     public List<Product> getAll() throws EmptyStorageException {
         getLocker().readLock().lock();
         try {
-            if (storageItems.isEmpty()) {
+            if (storageProducts.isEmpty()) {
                 throw new EmptyStorageException("Storage is empty.");
             } else {
-                return storageItems.stream()
-                        .map(ProductStorageItem::getItem)
-                        .collect(Collectors.toList());
+                return storageProducts;
             }
         } finally {
             getLocker().readLock().unlock();
@@ -47,7 +46,10 @@ public class ProductStorageDAO implements ProductDAO {
 
     @Override
     public Product get(Long id) throws ProductNotFoundException {
-        return null;
+        return storageProducts.stream()
+                .filter(x -> (id.equals(x.getId())))
+                .findAny()
+                .orElseThrow(() -> new ProductNotFoundException("Product with id " + id + " not found.", id));
     }
 
     @Override

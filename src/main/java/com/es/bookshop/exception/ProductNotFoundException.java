@@ -1,5 +1,7 @@
 package com.es.bookshop.exception;
 
+import java.util.function.Supplier;
+
 public class ProductNotFoundException extends RuntimeException {
     private final Long productId;
 

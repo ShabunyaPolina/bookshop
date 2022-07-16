@@ -1,11 +1,12 @@
-com\es\bookshop\dao\ProductDAO.class
-com\es\bookshop\demodata\ProductStorage.class
 com\es\bookshop\product\Product.class
+com\es\bookshop\web\servlet\ProductDetailsServlet.class
 com\es\bookshop\product\Price.class
-com\es\bookshop\product\book\Book.class
 com\es\bookshop\dao\impl\ProductStorageDAO$1.class
 com\es\bookshop\dao\impl\ProductStorageDAO$DAOHolder.class
+com\es\bookshop\exception\EmptyStorageException.class
+com\es\bookshop\dao\ProductDAO.class
+com\es\bookshop\demodata\ProductStorage.class
+com\es\bookshop\product\book\Book.class
 com\es\bookshop\dao\impl\ProductStorageDAO.class
 com\es\bookshop\exception\ProductNotFoundException.class
 com\es\bookshop\dao\item\ProductStorageItem.class
-com\es\bookshop\exception\EmptyStorageException.class

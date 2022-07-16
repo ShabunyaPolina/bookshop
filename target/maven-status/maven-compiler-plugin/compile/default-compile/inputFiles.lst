@@ -1,6 +1,7 @@
 D:\bookshop\src\main\java\com\es\bookshop\product\Price.java
 D:\bookshop\src\main\java\com\es\bookshop\dao\ProductDAO.java
 D:\bookshop\src\main\java\com\es\bookshop\product\Product.java
+D:\bookshop\src\main\java\com\es\bookshop\web\servlet\ProductDetailsServlet.java
 D:\bookshop\src\main\java\com\es\bookshop\demodata\ProductStorage.java
 D:\bookshop\src\main\java\com\es\bookshop\dao\item\ProductStorageItem.java
 D:\bookshop\src\main\java\com\es\bookshop\web\servlet\MainPageServlet.java

@@ -22,6 +22,17 @@ public class Book extends Product {
         this.description = description;
     }
 
+    public Book(Long id, String code, Price price, String name, String author, String language,
+                String publishingHouse, int numberOfPages, String description, String imageUrl) {
+        super(id, code, price, imageUrl);
+        this.name = name;
+        this.author = author;
+        this.language = language;
+        this.publishingHouse = publishingHouse;
+        this.numberOfPages = numberOfPages;
+        this.description = description;
+    }
+
     public String getName() {
         return name;
     }

@@ -2,7 +2,6 @@ package com.es.bookshop.web.servlet;
 
 import com.es.bookshop.dao.ProductDAO;
 import com.es.bookshop.dao.impl.ProductStorageDAO;
-import com.es.bookshop.dao.item.ProductStorageItem;
 import com.es.bookshop.product.Product;
 
 import javax.servlet.ServletConfig;
@@ -11,9 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 
-public class MainPageServlet extends HttpServlet {
+public class ProductDetailsServlet extends HttpServlet {
     private ProductDAO productDAO;
 
     @Override
@@ -24,12 +22,14 @@ public class MainPageServlet extends HttpServlet {
     }
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        List<Product> products = productDAO.getAll();
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String productIdStr = request.getParameter("id");
+        Long productId = Long.valueOf(productIdStr);
 
-        request.setAttribute("products", products);
+        Product product = productDAO.get(productId);
 
-        request.getRequestDispatcher("/WEB-INF/pages/mainPage.jsp").forward(request, response);
+        request.setAttribute("product", product);
+
+        request.getRequestDispatcher("/WEB-INF/pages/productDetails.jsp").forward(request, response);
     }
 }

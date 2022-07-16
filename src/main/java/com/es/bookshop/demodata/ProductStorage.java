@@ -1,19 +1,19 @@
 package com.es.bookshop.demodata;
 
-import com.es.bookshop.dao.item.ProductStorageItem;
 import com.es.bookshop.product.Price;
+import com.es.bookshop.product.Product;
 import com.es.bookshop.product.book.Book;;
 
 import java.util.ArrayList;
 
-public class ProductStorage extends ArrayList<ProductStorageItem> {
-    protected Long lastID;
+public class ProductStorage extends ArrayList<Product> {
+    private Long lastID;
 
     public ProductStorage() {
         lastID = 0L;
 
-        add(new ProductStorageItem(++lastID,
-                new Book("ak1",
+        add(new Book(++lastID,
+                        "anna-karenina-1",
                         new Price(13, "$"),
                         "Anna Karenina",
                         "Lev Tolstoy",
@@ -25,10 +25,10 @@ public class ProductStorage extends ArrayList<ProductStorageItem> {
                                 "brilliant officer Alexei Vronsky against the backdrop of a happy family life of " +
                                 "the nobles Konstantin Levin and Kitty Shcherbatskaya.",
                         "/images/AnnaKarenina.jpg"
-                )));
+                ));
 
-        add(new ProductStorageItem(++lastID,
-                new Book("pap3",
+        add(new Book(++lastID,
+                        "pride-and-prejudice-1",
                         new Price(16, "$"),
                         "Pride and Prejudice",
                         "Jane Austen",
@@ -41,10 +41,10 @@ public class ProductStorage extends ArrayList<ProductStorageItem> {
                                 "of hasty judgments and comes to appreciate the difference between superficial " +
                                 "goodness and actual goodness.",
                         "/images/PrideAndPrejudice.jpg"
-                )));
+                ));
 
-        add(new ProductStorageItem(++lastID,
-                new Book("jr6",
+        add(new Book(++lastID,
+                        "jane-eyre-1",
                         new Price(9, "$"),
                         "Jane Eyre",
                         "Charlotte Bronte",
@@ -59,7 +59,7 @@ public class ProductStorage extends ArrayList<ProductStorageItem> {
                                 "It, along with Jane Austen's Pride and Prejudice, is one of the most famous " +
                                 "romance novels.",
                         "/images/JaneEyre.jpg"
-                )));
+                ));
     }
 
     public Long getLastID() {
