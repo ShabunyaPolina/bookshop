@@ -1,0 +1,6 @@
+0:0:0:0:0:0:0:1 - - [16/Jul/2022:14:13:18 +0300] "GET /bookshop-servlet-api HTTP/1.1" 200 3966 http-bio-8080-exec-2 113
+0:0:0:0:0:0:0:1 - - [16/Jul/2022:14:13:18 +0300] "GET /bookshop-servlet-api/styles/main.css;jsessionid=B89E603B01F0D8A253492BC6C3BB590A HTTP/1.1" 200 270 http-bio-8080-exec-3 5
+0:0:0:0:0:0:0:1 - - [16/Jul/2022:14:13:18 +0300] "GET /bookshop-servlet-api/images/AnnaKarenina.jpg;jsessionid=B89E603B01F0D8A253492BC6C3BB590A HTTP/1.1" 200 268488 http-bio-8080-exec-1 10
+0:0:0:0:0:0:0:1 - - [16/Jul/2022:14:13:18 +0300] "GET /bookshop-servlet-api/images/PrideAndPrejudice.jpg;jsessionid=B89E603B01F0D8A253492BC6C3BB590A HTTP/1.1" 200 1008051 http-bio-8080-exec-6 14
+0:0:0:0:0:0:0:1 - - [16/Jul/2022:14:13:18 +0300] "GET /bookshop-servlet-api/images/JaneEyre.jpg;jsessionid=B89E603B01F0D8A253492BC6C3BB590A HTTP/1.1" 200 4071599 http-bio-8080-exec-5 40
+0:0:0:0:0:0:0:1 - - [16/Jul/2022:14:13:18 +0300] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-9 0
